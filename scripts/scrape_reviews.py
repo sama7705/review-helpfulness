@@ -10,19 +10,19 @@ os.makedirs("../data", exist_ok=True)
 
 all_reviews = []
 review_id = 1
-
+#bsh8l chrome
 options = Options()
 options.add_argument("--start-maximized")
 options.add_argument("--disable-blink-features=AutomationControlled")
 
 driver = webdriver.Chrome(options=options)
-
+#bgeb al numbers
 def get_number(text):
     nums = re.findall(r"\d+", text.replace(",", ""))
     if nums:
         return int(nums[0])
     return 0
-
+#bgeb al html w lw msh mwgod skip
 def safe_text(parent, selector):
     try:
         return parent.find_element(By.CSS_SELECTOR, selector).text.strip()
@@ -50,7 +50,7 @@ for game_name, app_id in steam_games.items():
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(2)
 
-    cards = driver.find_elements(By.CSS_SELECTOR, "div.apphub_Card")
+    cards = driver.find_elements(By.CSS_SELECTOR, "div.apphub_Card")#kol review card
 
     print(game_name, "Steam reviews found:", len(cards))
 
