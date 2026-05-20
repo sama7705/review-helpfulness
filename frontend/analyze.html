@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Review Analysis | Review Helpfulness AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="analyze">
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">AI</span>
+            <span>Review Helpfulness</span>
+        </a>
+        <nav class="navbar">
+            <a href="index.html" data-nav="dashboard">Dashboard</a>
+            <a href="analyze.html" data-nav="analyze">AI Analysis</a>
+            <a href="search.html" data-nav="search">IR Search</a>
+            <a href="insights.html" data-nav="insights">Insights</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="hero-panel compact">
+            <p class="eyebrow">Prediction + Sentiment + Summary + Keywords</p>
+            <h1>AI Review Analysis</h1>
+            <p class="hero-copy">
+                Paste one review and receive a single, organized analysis result.
+            </p>
+        </section>
+
+        <section class="workspace-grid">
+            <article class="panel">
+                <div class="panel-heading">
+                    <h2>Analyze a Review</h2>
+                    <p>Use the ML helpfulness model and simple NLP helpers in one clean workflow.</p>
+                </div>
+                <textarea id="analysisInput" placeholder="Paste a review here..."></textarea>
+                <button class="primary-button" id="analyzeButton">Analyze Review</button>
+            </article>
+
+            <article class="panel result-card empty-result" id="analysisResult">
+                <span class="empty-icon">AI</span>
+                <p>Your prediction, sentiment, probabilities, summary, and keywords will appear here.</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

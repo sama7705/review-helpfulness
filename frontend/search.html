@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IR Search Engine | Review Helpfulness AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="search">
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">AI</span>
+            <span>Review Helpfulness</span>
+        </a>
+        <nav class="navbar">
+            <a href="index.html" data-nav="dashboard">Dashboard</a>
+            <a href="analyze.html" data-nav="analyze">AI Analysis</a>
+            <a href="search.html" data-nav="search">IR Search</a>
+            <a href="insights.html" data-nav="insights">Insights</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="hero-panel compact">
+            <p class="eyebrow">Information Retrieval Layer</p>
+            <h1>IR Search Engine</h1>
+            <p class="hero-copy">
+                Search review text and inspect labels, votes, ratings, and AI predictions.
+            </p>
+        </section>
+
+        <section class="panel search-panel">
+            <div class="search-row">
+                <input id="searchInput" type="text" placeholder="Search for bugs, gameplay, cheaters, delivery, quality...">
+                <button class="primary-button" id="searchButton">Search</button>
+            </div>
+        </section>
+
+        <section class="results-list" id="searchResults">
+            <article class="empty-result panel">
+                <span class="empty-icon">IR</span>
+                <p>Enter a keyword to retrieve matching reviews.</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

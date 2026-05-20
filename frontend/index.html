@@ -2,35 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Review Helpfulness Predictor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview | Review Helpfulness AI</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="dashboard">
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">AI</span>
+            <span>Review Helpfulness</span>
+        </a>
+        <nav class="navbar">
+            <a href="index.html" data-nav="dashboard">Dashboard</a>
+            <a href="analyze.html" data-nav="analyze">AI Analysis</a>
+            <a href="search.html" data-nav="search">IR Search</a>
+            <a href="insights.html" data-nav="insights">Insights</a>
+        </nav>
+    </header>
 
-    <div class="container">
-        <h1>Review Helpfulness Predictor</h1>
-        <p class="subtitle">Enter a review and let the system predict if it is helpful.</p>
+    <main class="page-shell">
+        <section class="hero-panel">
+            <p class="eyebrow">AI-Powered Review Helpfulness Prediction System</p>
+            <h1>Dashboard Overview</h1>
+            <p class="hero-copy">
+                A clean snapshot of review volume, helpfulness labels, ratings, and item coverage.
+            </p>
+        </section>
 
-        <textarea id="reviewInput" placeholder="Write your review here..."></textarea>
-
-        <button onclick="predictReview()">Predict Helpfulness</button>
-
-        <div id="resultBox" class="result hidden">
-            <h2>Prediction Result</h2>
-
-            <p><strong>Original Review:</strong></p>
-            <div id="originalText" class="text-box"></div>
-
-            <p><strong>Preprocessed Text:</strong></p>
-            <div id="processedText" class="text-box"></div>
-
-            <p><strong>Prediction:</strong></p>
-            <div id="prediction" class="prediction"></div>
-
-            <p><strong>Confidence:</strong></p>
-            <div id="confidence" class="confidence"></div>
-        </div>
-    </div>
+        <section class="stats-grid">
+            <article class="stat-card card-blue">
+                <span>Total Reviews</span>
+                <strong id="totalReviews">-</strong>
+            </article>
+            <article class="stat-card card-green">
+                <span>Helpful Reviews</span>
+                <strong id="helpfulReviews">-</strong>
+            </article>
+            <article class="stat-card card-pink">
+                <span>Not Helpful Reviews</span>
+                <strong id="notHelpfulReviews">-</strong>
+            </article>
+            <article class="stat-card card-purple">
+                <span>Average Rating</span>
+                <strong id="averageRating">-</strong>
+            </article>
+            <article class="stat-card card-lavender">
+                <span>Games / Items</span>
+                <strong id="numberOfGames">-</strong>
+            </article>
+            <article class="stat-card card-wide card-cream">
+                <span>Most Reviewed Item</span>
+                <strong id="mostReviewedItem">-</strong>
+            </article>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights & Comparison | Review Helpfulness AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="insights">
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">AI</span>
+            <span>Review Helpfulness</span>
+        </a>
+        <nav class="navbar">
+            <a href="index.html" data-nav="dashboard">Dashboard</a>
+            <a href="analyze.html" data-nav="analyze">AI Analysis</a>
+            <a href="search.html" data-nav="search">IR Search</a>
+            <a href="insights.html" data-nav="insights">Insights</a>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        <section class="hero-panel compact">
+            <p class="eyebrow">Analytics + Comparison Layer</p>
+            <h1>Insights & Comparison</h1>
+            <p class="hero-copy">
+                Understand helpfulness balance, item distribution, and rating differences in one focused view.
+            </p>
+        </section>
+
+        <section class="insight-stat-grid" id="comparisonStats"></section>
+
+        <section class="chart-grid">
+            <article class="panel">
+                <div class="panel-heading">
+                    <h2>Helpful vs Not Helpful</h2>
+                    <p>Class counts from the dataset.</p>
+                </div>
+                <div id="labelChart"></div>
+            </article>
+
+            <article class="panel">
+                <div class="panel-heading">
+                    <h2>Reviews per Item</h2>
+                    <p>Top games or products by review count.</p>
+                </div>
+                <div id="itemChart"></div>
+            </article>
+
+            <article class="panel">
+                <div class="panel-heading">
+                    <h2>Average Rating</h2>
+                    <p>Overall dataset rating trend.</p>
+                </div>
+                <div id="ratingChart"></div>
+            </article>
+        </section>
+
+        <section class="panel interpretation-card">
+            <div class="panel-heading">
+                <h2>Interpretation</h2>
+            </div>
+            <p id="comparisonText">Loading interpretation...</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
