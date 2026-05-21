@@ -77,8 +77,6 @@ async function loadDashboard() {
     document.getElementById("helpfulReviews").textContent = data.helpful_reviews;
     document.getElementById("notHelpfulReviews").textContent = data.not_helpful_reviews;
     document.getElementById("averageRating").textContent = data.average_rating;
-    document.getElementById("numberOfGames").textContent = data.number_of_games;
-    document.getElementById("mostReviewedItem").textContent = data.most_reviewed_item;
 }
 
 async function analyzeReview() {
@@ -232,12 +230,6 @@ async function loadInsights() {
         ${renderBar("Helpful", stats.helpful_reviews, maxLabelCount, "#f39ab8")}
         ${renderBar("Not Helpful", stats.not_helpful_reviews, maxLabelCount, "#d9a7d7")}
     `;
-
-    const items = Object.entries(stats.games || {});
-    const maxItemCount = Math.max(...items.map((item) => item[1]), 1);
-    document.getElementById("itemChart").innerHTML = items
-        .map(([item, count]) => renderBar(item, count, maxItemCount))
-        .join("");
 
     const ratingWidth = Math.round((stats.average_rating / 5) * 100);
     document.getElementById("ratingChart").innerHTML = `
